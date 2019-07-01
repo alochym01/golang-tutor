@@ -32,7 +32,6 @@
     -   Create folder structure
         ```
         chym/
-        ├── pkg
         └── src
             ├── github.com
             │   └── user
@@ -54,3 +53,5 @@
             fmt.Println(stringutil.Reverse("!oG ,olleH"))
         }
         ```
+    -   Executing `go run src/hello`
+    -   Building `go build src/hello`
