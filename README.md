@@ -13,7 +13,9 @@
         PATH="$GOROOT/bin:$PATH:$HOME/.local/bin:$HOME/bin"
         export PATH
         ```
-    -   Run `export GOPATH=$(pwd)` before `code .`
+    -   Setting GO environment variables before `code .`
+        -   Run `export GOPATH=$(pwd)`
+        -   Run `export GOBIN=$(pwd)/bin`
 -   Code organization
     -   A workspace contains many repo, which is managed by git
     -   Each repo contains one or more packages
@@ -32,12 +34,15 @@
     -   Create folder structure
         ```
         chym/
-        └── src
-            ├── github.com
-            │   └── user
-            │       └── stringutil
-            │           └── reverse.go
-            └── hello.go
+            ├── bin
+            ├── pkg         # will be stored compile third party packages
+            ├── README.md
+            └── src
+                ├── github.com
+                │   └── user
+                │       └── stringutil
+                │           └── reverse.go
+                └── hello.go
         ```
     -   Create `hello.go` with content
         ```
@@ -54,4 +59,4 @@
         }
         ```
     -   Executing `go run src/hello`
-    -   Building `go build src/hello`
+    -   Building `go install src/hello` ==> `bin/hello` executable file
