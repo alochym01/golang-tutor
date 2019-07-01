@@ -31,6 +31,7 @@
     -   This is the location of your workspace
     -   example: **export GOPATH=$(pwd)**
 -   Using library
+    -   `mkdir -p {bin,pkg,src}`
     -   Create folder structure
         ```
         chym/
